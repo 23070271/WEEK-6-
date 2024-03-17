@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ex02</title>
+</head>
+<body>
+    <input type="text" id="txa">
+    <input type="text" id="txb">
+    <button onclick="tongAB()">
+        tinh tong
+    </button>
+</body>
+<script language="JavaScript">
+    function tongAB() {
+        var txa = document.getElementById("txa").value;
+        var txb = document.getElementById("txb").value;
+        if (txa == null || txa == "" || isNaN(txa))
+        {
+            alert("Vui lòng nhập giá trị");
+            return;
+        }
+        if (txb == null || txb == "" || isNaN(txb))
+        {
+            alert("Vui lòng nhập giá trị");
+            return;
+        }
+        alert(parseInt(txa) + parseInt(txb));
+        document.getElementById('txa').value =  '';
+        document.getElementById('txb').value =  '';
+    }
+</script>
+</html>
